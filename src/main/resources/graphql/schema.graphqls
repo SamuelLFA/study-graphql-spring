@@ -1,0 +1,19 @@
+type Product {
+    name: String!
+    price: Float!
+    quantityInStock: Int!
+}
+
+input ProductInput {
+    name: String!
+    price: Float!
+    quantityInStock: Int!
+}
+
+type Mutation {
+    createProduct(product: ProductInput!): Product
+}
+
+type Query {
+    findProduct(name: String): Product
+}
